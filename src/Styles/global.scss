@@ -1,0 +1,1446 @@
+@import "./variables.scss";
+@import "./responsive.scss";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grayColor {
+  color: $GrayColor;
+}
+
+.blueColor {
+  color: $BlueColor;
+}
+
+.darkColor {
+  color: $DarkColor;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.mainContainer {
+  margin-left: 240px !important;
+  margin-inline: 10px;
+}
+
+@media (max-width: 600px) {
+  .mainContainer {
+    margin-left: 0 !important;
+    margin-inline: 10px;
+  }
+}
+
+.display-none {
+  display: none !important;
+}
+
+.display-block {
+  display: block !important;
+}
+//? *************** Navbar ***************
+
+.css-hip9hq-MuiPaper-root-MuiAppBar-root {
+  margin-top: 27px;
+  background-color: #f8f9fb !important;
+  border-radius: 16px !important;
+  box-shadow: none !important;
+
+  .navAvatar {
+    margin-left: auto !important;
+  }
+}
+
+.nav-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.navInfo {
+  display: flex;
+  flex-direction: column;
+}
+//! *************** Toolbar Drawer ***************
+
+.css-hyum1k-MuiToolbar-root {
+  min-height: 30px !important;
+}
+
+.MuiDrawer-paper {
+  background-color: #203fc7 !important;
+  .css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root {
+    padding-left: 25px;
+    color: white !important;
+    opacity: 0.65;
+
+    &:hover {
+      opacity: 1;
+      background-color: rgba(26, 27, 30, 0.17);
+    }
+  }
+
+  .css-cveggr-MuiListItemIcon-root {
+    color: white;
+    min-width: 40px !important;
+  }
+}
+
+.active {
+  background-color: rgba(26, 36, 63, 0.17);
+  border-left: 4px solid rgb(2, 2, 158);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 4px 4px 4px,
+    rgba(145, 145, 145, 0.173) 0px 1px 1px 4px;
+  animation: sideAni 2s;
+  .css-16ac5r2-MuiButtonBase-root-MuiListItemButton-root {
+    color: white !important;
+    opacity: 1;
+  }
+  a {
+    color: white !important;
+    transition: all 0.4s;
+  }
+}
+@keyframes sideAni {
+  50% {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 0px 0px, rgba(0, 0, 0, 0.23) 0px 0px 0px;
+  }
+}
+.testContainer {
+  display: flex;
+  align-items: center;
+  .testInput {
+    width: 100px;
+    margin-top: 20px !important;
+  }
+  .testButton {
+    width: 50px;
+    padding: 7px !important;
+    margin-top: 20px !important;
+    margin-left: 20px !important;
+  }
+  .radioInput {
+    width: 20px;
+    height: 20px;
+  }
+  .inputWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    gap: 5px;
+  }
+}
+
+.show {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+.hide {
+  display: none;
+}
+
+//! *************** Authentication ***************
+
+.loginContainer {
+  padding: 40px 20px;
+}
+
+.authLayout {
+  width: 95%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 30px !important;
+  line-height: 2.1;
+}
+.auth {
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+
+  font-family: sans-serif;
+  display: flex;
+  justify-content: left;
+  padding: 20px 30px;
+  align-items: end;
+  color: #fff;
+}
+.auth-background {
+  background-image: url("../Assets/Images/bg1.png");
+  height: 90vh;
+}
+.auth-background2 {
+  background-image: url("../Assets/Images/bg2.png");
+  height: 90%;
+}
+.auth-background3 {
+  background-image: url("../Assets/Images/bg3.png");
+  height: 90vh;
+}
+.auth-background4 {
+  background-image: url("../Assets/Images/bg1.png");
+  height: 90vh;
+}
+.auth-desc {
+  h4 {
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10;
+  }
+}
+
+.auth-input {
+  width: 100%;
+  margin: 15px 0 !important;
+  .auth-input:not(:last-child) {
+    margin: 15px 0 !important;
+  }
+}
+
+.loadingButton {
+  background-color: #1976d2 !important;
+  span {
+    color: white !important;
+  }
+}
+.imagesBtn {
+  margin-top: 20px !important;
+}
+
+.btnContainer {
+  margin-top: 40px !important;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.loginLinks {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+.inputsContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+//? *************** TableHeader ***************
+.header {
+  margin-top: 2em;
+  .headerContainer {
+    display: flex;
+    justify-content: space-between;
+
+    .biggerSize {
+      font-size: 18px;
+      line-height: normal;
+    }
+
+    .smallerSize {
+      font-size: 14px;
+      letter-spacing: none;
+    }
+
+    .linkStyle {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+//! *************** Table ***************
+
+.dataGrid {
+  margin-top: 2em;
+  padding-inline: 20px;
+  padding-block: 10px;
+  background-color: white;
+
+  .MuiDataGrid-toolbarContainer {
+    flex-direction: row-reverse;
+  }
+}
+
+.img-table {
+  width: 35px;
+  height: 35px;
+  border-radius: 0.5em;
+  transition: all 0.4s;
+
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+
+//! *************** Form ***************
+.formContainer {
+  margin-top: 50px !important;
+  width: 70%;
+  margin: auto;
+
+  .roomNumber {
+    display: flex;
+    width: 100%;
+    margin: auto;
+  }
+
+  .middleInputs {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    .price,
+    .capacity,
+    .discount,
+    .facilities {
+      width: 48%;
+    }
+  }
+}
+
+//! *************** ChangePassword ***************
+.changePasswordBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background-color: #fff;
+  border: 2px solid #1976d2;
+  border-radius: 20px;
+  box-shadow: 24px;
+  padding: 30px;
+}
+
+.loadingButton {
+  background-color: #1976d2 !important;
+
+  span {
+    color: white !important;
+  }
+}
+.tableStyle {
+  height: 27rem !important;
+}
+.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  border: rgba(21, 3, 177, 0.505) 2px solid !important;
+  animation: shadowAni 5s;
+  box-shadow: rgba(22, 22, 22, 0.904) 5px 1px 1px !important;
+  animation: moveInBottom 1s;
+}
+
+.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper:hover {
+  box-shadow: rgb(3, 62, 255) 2px 0px 1px !important;
+}
+@keyframes moveInBottom {
+  50% {
+    transform: translateY(-5%) rotateY(10deg);
+  }
+
+  100% {
+    transform: translatex(0px);
+  }
+}
+
+//ToDo **************************** Landing-Portal ****************************
+
+.userContainer {
+  padding-top: 50px;
+  padding-inline: 70px;
+}
+
+//! ************** NavBar-Portal **************
+
+.nav {
+  position: static !important;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 13px;
+  box-shadow: none !important;
+  font-family: "Poppins", sans-serif;
+
+  .subNav {
+    flex-grow: 1;
+    margin-left: 30px;
+    text-align: start;
+  }
+  .centerText {
+    text-align: center !important;
+  }
+  .navList {
+    display: flex !important;
+    align-items: center;
+    gap: 20px;
+
+    .navLink {
+      @extend .darkColor;
+      font-weight: 400 !important;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    .activeLink {
+      color: $BlueColor !important;
+    }
+    .navBtn {
+      border-radius: 4px;
+      background: #3252df !important;
+      box-shadow: 0px 8px 15px 0px rgba(50, 82, 223, 0.3) !important;
+      padding-inline: 25px !important;
+    }
+
+    .navBtnOut {
+      border-radius: 4px;
+      box-shadow: 0px 8px 15px 0px rgba(223, 70, 50, 0.3) !important;
+      padding-inline: 25px !important;
+    }
+
+    .navBtnSign {
+      border-radius: 4px;
+      background: #ddcd1b !important;
+
+      box-shadow: 0px 8px 15px 0px rgba(223, 220, 50, 0.632) !important;
+      padding-inline: 25px !important;
+    }
+  }
+}
+
+//! ************** Footer **************
+
+.footerContainer {
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-inline: 70px;
+  border-top: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mainPart {
+  padding-bottom: 20px;
+}
+
+.subPara {
+  @extend .grayColor;
+  max-width: 250px;
+}
+
+.listHead {
+  @extend .darkColor;
+  padding-top: 0 !important;
+  font-size: 20px !important;
+  font-weight: 600;
+}
+
+.listChild {
+  @extend .grayColor;
+  padding-bottom: 0 !important;
+}
+
+.FooterCreatedBy {
+  @extend .grayColor;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  .links {
+    text-decoration: underline;
+    font-weight: 600;
+    color: #203fc7;
+    margin-inline: 3px;
+    cursor: pointer;
+  }
+}
+//? ************** Landing **************
+.rightConSke {
+  padding-right: 40px;
+  position: relative;
+  margin-top: 35px;
+  width: 500px;
+  border-radius: 100px 15px 15px 15px;
+}
+.landingSec {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding-inline: 70px;
+  padding-top: 50px;
+  .rightCon {
+    padding-right: 40px;
+    position: relative;
+    margin-top: 35px;
+    width: 500px;
+
+    .LandingImg {
+      width: 100%;
+      border-radius: 100px 15px 15px 15px;
+    }
+    @media (max-width: 768px) {
+      height: 30vh;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 100px 15px 15px 15px;
+      top: 10%;
+      left: 10%;
+      right: 0px;
+      bottom: -10%;
+      border: 2px solid #e5e5e5;
+      z-index: -1;
+      @media (max-width: 768px) {
+        display: none !important;
+      }
+    }
+  }
+
+  .leftCon {
+    .title {
+      @extend .darkColor;
+      font-family: "Poppins", sans-serif;
+      max-width: 499px;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: normal;
+    }
+    .subTitle {
+      @extend .grayColor;
+      font-family: "Poppins", sans-serif;
+      max-width: 530px;
+      line-height: 28px;
+      font-weight: 500 !important;
+    }
+
+    .bookingTitle {
+      @extend .darkColor;
+      margin-top: 20px;
+      font-family: "Poppins", sans-serif;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .subBookingTitle {
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      margin-left: 5px;
+      margin-top: 10px;
+    }
+  }
+
+  .exploreCon {
+    margin-top: 15px;
+    margin-left: 5px;
+
+    .css-i4bv87-MuiSvgIcon-root {
+      font-size: 30px;
+    }
+
+    .capacityCon {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+        text-align: center;
+        margin: auto;
+        padding: 16.5px 60px;
+      }
+    }
+  }
+
+  .submitExplore {
+    margin-top: 50px !important;
+    margin-left: 10px;
+    border-radius: 4px;
+    background: #3252df !important;
+    box-shadow: 0px 8px 15px 0px rgba(50, 82, 223, 0.3) !important;
+    padding-inline: 100px !important;
+    text-transform: none !important;
+  }
+}
+
+@media (max-width: 1050px) {
+}
+
+.caleBtn {
+  background-color: #1976d2 !important;
+  justify-content: center;
+  align-items: center;
+  color: white !important;
+}
+.caleBtnDiscernment {
+  @extend .caleBtn;
+  background-color: #d32f2f !important;
+}
+.calendarField {
+  display: inline-block !important;
+  margin-right: 10px !important;
+
+  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    text-align: center;
+    margin: auto;
+    padding: 16.5px 60px;
+
+    @media (max-width: 960px) {
+      width: 100%;
+    }
+    @media (max-width: 576px) {
+      padding: 10.5px !important;
+    }
+  }
+}
+
+.capacityField {
+  @extend .calendarField;
+  margin-left: 10px !important;
+}
+//? ****************************ViewSection-Landing*********************************
+.viewSec {
+  margin-top: 50px;
+
+  .adsTitle {
+    @extend .darkColor;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.cardBox {
+  @media screen and (max-width: "768px") {
+    margin: auto;
+    width: 50vw;
+  }
+  @media (max-width: "430px") {
+    margin: auto;
+    width: 85vw;
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1fr;
+  grid-template-rows: 15rem 15rem;
+  grid-template-areas:
+    "main - -"
+    "main - -";
+  gap: 30px 20px;
+  justify-content: space-between;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .main {
+    grid-area: main;
+    object-fit: fill;
+    width: 100% !important;
+    border-radius: 15px;
+  }
+}
+
+.sliderCon {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.RoomPicture {
+  object-fit: fill;
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+}
+.RoomPicture2 {
+  object-fit: fill;
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+}
+
+.roomCard {
+  position: relative !important;
+  border-radius: 15px;
+
+  .discountLayer {
+    position: absolute;
+    padding: 1rem;
+    top: 0px;
+    right: 0px;
+    background-color: #ff498c9e;
+    color: white;
+    min-width: 20%;
+    text-align: center;
+    border-radius: 0px 15px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(32, 63, 199, 0.21);
+    border-radius: 15px;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 2;
+    transform: translateY(10px);
+  }
+  .layer2 {
+    height: 98%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(32, 63, 199, 0.21);
+    border-radius: 15px;
+    opacity: 0;
+    transition: all 0.5s;
+    z-index: 2;
+    transform: translateY(10px);
+  }
+
+  &:hover .layer,
+  &:hover .layer2 {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .text {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    text-align: center;
+
+    h6 {
+      font-style: italic;
+      font-size: 20px;
+      position: relative;
+      margin-bottom: 15px;
+      color: white;
+      transform: translateY(-15px);
+      transition: transform 0.5s;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+
+      .opacity:hover {
+        background-color: rgb(255 0 0 / 15%);
+      }
+
+      .color {
+        color: white !important;
+      }
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &:hover h6,
+  &:hover .icons svg {
+    transform: translateY(0);
+  }
+}
+
+.bookingTitle {
+  @extend .adsTitle;
+  @media (max-width: 960px) {
+    margin-bottom: 1rem;
+    margin-top: 2rem !important;
+  }
+}
+
+.iconBtn {
+  padding: 0 !important;
+  width: 24px !important;
+}
+
+.slick-slide {
+  width: 200px !important;
+}
+
+.slick-track {
+  display: flex;
+  gap: 70px;
+}
+
+//! ****************************Explore Page*********************************
+
+.exploreCom {
+  font-family: "Poppins", sans-serif;
+
+  .roomCon {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+.title {
+  @extend .darkColor;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 36px !important;
+  font-weight: 600 !important;
+}
+
+.subTitle {
+  @extend .darkColor;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(1rem, 2.5vw, 1.5rem) !important;
+  font-weight: 500 !important;
+  margin-top: 20px !important;
+}
+
+//! ****************************RoomDetails Page*********************************
+
+.roomDetailsCon {
+  font-family: "Poppins", sans-serif;
+  .roomImages {
+    margin-top: 20px;
+  }
+  .gridDetails {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 15rem 15rem;
+    grid-template-areas:
+      "image - "
+      "image - ";
+    gap: 30px 20px;
+    justify-content: space-between;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      border-radius: 15px;
+    }
+
+    .image {
+      grid-area: image;
+      object-fit: fill;
+      border-radius: 15px;
+    }
+  }
+
+  .roomDetailsBooking {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    .description {
+      @extend .grayColor;
+      max-width: 730px;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 200%;
+      word-spacing: 1.8px;
+      margin-bottom: 5px;
+    }
+
+    .roomFacilities {
+      display: flex;
+      // display: flex;
+      justify-content: space-around;
+      column-gap: 60px;
+      row-gap: 20px;
+      align-items: baseline;
+
+      max-width: 650px;
+      flex-wrap: wrap;
+      // margin-top: 20px;
+      // @media (max-width: 560px) {
+      //   display: flex;
+      //   justify-content: space-between;
+      //   column-gap: 1.5rem;
+      //   row-gap: 5px;
+      //   align-items: start;
+      // }
+      .facilities {
+        display: flex;
+        flex-direction: column;
+
+        // .facilitiesIcon {
+        //   max-width: 60%;
+        //   min-width: 30%;
+        // }
+        .mainDec {
+          @extend .darkColor;
+          font-weight: bold;
+        }
+        .subDec {
+          @extend .grayColor;
+          font-size: 16px;
+          @media (max-width: 576px) {
+            font-size: clamp(0.5rem, 2.5vw, 1rem);
+          }
+        }
+      }
+    }
+
+    .roomDetailsBook {
+      @media (max-width: 960px) {
+        margin-top: 3rem;
+      }
+      .roomDetailsCard {
+        padding-right: 15px;
+        padding-left: 60px;
+        padding-block: 50px;
+        display: flex;
+        justify-content: center;
+        .cardContent {
+          .bookingCon {
+            @extend .darkColor;
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-weight: 500;
+            margin-bottom: 15px;
+          }
+          .bookingPrice {
+            color: #1abc9c;
+            font-size: 36px;
+            font-weight: 500;
+          }
+          .priceFor {
+            @extend .grayColor;
+            font-size: clamp(2rem, 2.5vw, 1.5rem);
+            font-weight: 275;
+            font-family: Poppins;
+            text-transform: capitalize;
+          }
+          .bookingDiscount {
+            color: #ff1612;
+            font-weight: 500;
+          }
+          .bookingTitle {
+            @extend .darkColor;
+            margin-top: 150px;
+            font-family: "Poppins", sans-serif;
+            margin-bottom: 10px;
+            @media (max-width: 960px) {
+              margin-top: 2rem;
+            }
+          }
+        }
+
+        .submitBooking {
+          @extend .flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 20px;
+          .submitBtn {
+            background-color: $BlueColor !important;
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sub {
+  font-size: 18px !important;
+  font-weight: 300;
+}
+.path {
+  @extend .grayColor;
+  font-family: "Poppins", sans-serif !important;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: clamp(1rem, 2.5vw, 1rem) !important;
+}
+
+.subPath {
+  display: flex;
+  align-items: center;
+  color: #152c5b !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: clamp(1rem, 2.5vw, 1rem) !important;
+  font-weight: 500 !important;
+}
+
+#g_a11y_announcement {
+  right: 0 !important;
+}
+
+//! ****************************Payment Page*********************************
+.paymentCon {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  .leftCon {
+    color: white;
+  }
+
+  .paymentForm {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    .cardElement,
+    .AddressElement {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .paymentBtnCon {
+      display: flex;
+      justify-content: space-between;
+      .paymentBtn {
+        width: 45%;
+        margin-block: 20px;
+        background-color: #2196f3;
+        color: white;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .paymentBtn:hover {
+        background-color: #1565c0;
+      }
+    }
+  }
+}
+
+.Stepper {
+  width: 50%;
+  margin: auto;
+}
+.headerPay {
+  @extend .flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+
+  .headerTitle {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #152c5b;
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  .content {
+    max-width: 396px;
+    color: #b0b0b0;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    text-align: center;
+  }
+}
+
+.backBtn {
+  margin-top: 20px !important;
+  background-color: #3252df !important;
+  color: white !important;
+  padding: 8px 20px !important;
+  border-radius: 5px !important;
+  cursor: pointer;
+  transition: background-color 0.3s ease !important;
+}
+
+.backBtn:hover {
+  background-color: #1565c0 !important;
+}
+
+.css-uguv5e-MuiResponsiveChart-container {
+  justify-content: space-between !important;
+}
+
+.homeTitle {
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  text-align: center;
+  @extend .title;
+  margin-top: 30px !important;
+}
+.parentBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.homeGrid {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  max-width: 100%;
+  gap: 5rem;
+
+  .card {
+    margin-top: 20px;
+    max-width: 380px;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    box-shadow: none;
+    border: none rgba(224, 224, 224, 0.596) !important;
+    background-color: rgb(30, 136, 229) !important;
+    color: rgb(255, 255, 255);
+    overflow: hidden !important;
+    position: relative;
+
+    .cardCon {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        width: 210px;
+        height: 210px;
+        background: rgb(21, 101, 192);
+        border-radius: 50%;
+        top: -135px;
+        right: -40px;
+        opacity: 0.5;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 210px;
+        height: 210px;
+        background: rgb(21, 101, 192);
+        border-radius: 50%;
+        z-index: 1;
+        top: -100px;
+        right: -120px;
+      }
+
+      .iconCon {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        line-height: 1;
+        background: rgb(21, 101, 192);
+        border-radius: 8px;
+        width: 44px;
+        height: 44px;
+        font-size: 1.5rem;
+        color: rgb(255, 255, 255);
+        margin-top: 8px;
+      }
+
+      .cardNumberCon {
+        display: flex;
+        align-items: center;
+
+        .cardNumber {
+          color: white;
+          display: flex;
+          margin: 14px 8px 6px 5px !important;
+          line-height: 1.334em !important;
+          font-size: 2.125rem !important;
+          font-weight: 500 !important;
+        }
+
+        .cardIcon {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background: rgb(144, 202, 249);
+          width: 22px;
+          height: 22px;
+          font-size: 1rem;
+          color: rgb(30, 136, 229);
+
+          .arrow {
+            width: 1em;
+            height: 1em;
+            display: inline-block;
+            fill: currentcolor;
+            flex-shrink: 0;
+            transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            font-size: inherit;
+            transform: rotate3d(1, 1, 1, 45deg);
+          }
+        }
+      }
+      .cardTitle {
+        margin-left: 5px;
+        line-height: 1.334em;
+        color: rgb(144, 202, 249);
+        font-size: 1rem;
+        font-weight: 500;
+      }
+    }
+
+    .css-46bh2p-MuiCardContent-root:last-child {
+      @media (max-width: 960) {
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  .card2 {
+    @extend .card;
+    background-color: rgb(94, 53, 177) !important;
+
+    .cardCon2 {
+      @extend .cardCon;
+
+      .cardNumberCon2 {
+        @extend .cardNumberCon;
+
+        .cardIcon2 {
+          @extend .cardIcon;
+          color: rgb(94, 53, 177);
+          background: rgb(179, 157, 219);
+
+          .arrow2 {
+            @extend .arrow;
+            transform: rotate(210deg);
+          }
+        }
+      }
+
+      .iconCon2 {
+        @extend .iconCon;
+        background: rgb(69, 39, 160);
+      }
+
+      &::before {
+        background: rgb(69, 39, 160);
+      }
+      &::after {
+        background: rgb(69, 39, 160);
+      }
+
+      .cardTitle2 {
+        @extend .cardTitle;
+        color: rgb(179, 157, 219);
+      }
+    }
+  }
+  .card3 {
+    @extend .card;
+    background-color: rgb(244, 67, 54) !important;
+
+    .cardCon3 {
+      @extend .cardCon;
+
+      .cardNumberCon3 {
+        @extend .cardNumberCon;
+
+        .cardIcon3 {
+          @extend .cardIcon;
+          color: rgb(244, 67, 54);
+          background: rgb(249, 163, 157);
+
+          .arrow3 {
+            @extend .arrow;
+            transform: rotate(210deg);
+          }
+        }
+      }
+
+      .iconCon3 {
+        @extend .iconCon;
+        background: rgb(233, 66, 54);
+      }
+
+      &::before {
+        background: rgb(230, 63, 51);
+      }
+      &::after {
+        background: rgb(220, 61, 50);
+      }
+
+      .cardTitle3 {
+        @extend .cardTitle;
+        color: rgb(249, 163, 157);
+      }
+    }
+  }
+}
+
+.background {
+  width: 439.07px;
+  height: 410.63px;
+  top: 150px;
+  left: 818px;
+  border-radius: 100px, 15px, 15px, 15px;
+}
+.calendarContainer {
+  display: flex;
+}
+.reviewSec {
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 90px;
+  justify-content: center;
+  .reviewImg {
+    max-width: 360px;
+    max-height: 450px;
+    position: relative;
+    padding-left: 40px;
+    .imgReview {
+      width: 100%;
+      height: 110%;
+      border-radius: 10px;
+      border-bottom-right-radius: 100px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 10px;
+      border-bottom-right-radius: 100px;
+      top: -10%;
+      left: 0;
+      right: 30px;
+      bottom: 10%;
+      border: 2px solid #e5e5e5;
+      z-index: -1;
+    }
+  }
+  .reviewCon {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    color: #152c5b;
+    .reviewTitle {
+      font-size: 30px;
+      font-weight: 500;
+      width: max-content;
+      margin-bottom: 30px;
+    }
+    .stars {
+      font-size: 2rem !important;
+    }
+    .reviewDis {
+      font-weight: 400;
+      font-size: clamp(1.9rem, 2.5vw, 3rem);
+      max-width: 500px;
+      min-width: 500px;
+    }
+    .reviewCap {
+      color: gray;
+      font-size: 16px;
+    }
+  }
+}
+@media (max-width: 960px) {
+  .reviewSec {
+    margin-top: 50px !important;
+    margin-bottom: 50px;
+  }
+  .reviewImg {
+    display: none;
+  }
+  .reviewCon {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .reviewTitle {
+    margin-bottom: 10px !important;
+  }
+  .reviewDis {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .reviewCon {
+    align-items: start;
+    width: 100%;
+  }
+  .reviewDis {
+    text-align: start;
+    font-size: 25px !important;
+
+    min-width: 25% !important;
+  }
+}
+
+.layer2 {
+  height: 98%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background: rgba(32, 63, 199, 0.21);
+  border-radius: 15px;
+  opacity: 0;
+  transition: all 0.5s;
+  z-index: 2;
+  transform: translateY(10px);
+}
+
+.loaderContainer {
+  width: 100%;
+  height: 87vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 150px;
+  height: 150px;
+  background: #3252df;
+  display: inline-block;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: animloader 1s ease-in infinite;
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}

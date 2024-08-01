@@ -1,0 +1,72 @@
+@import "../../../Styles/global.scss";
+
+.review {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #e5e5e5;
+  padding: 2rem 0rem;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  p {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  .roomfeedback {
+    width: 40%;
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+  }
+  .comments {
+    width: 40%;
+    margin-top: 2rem;
+    @media (max-width: 768px) {
+      width: 80%;
+    }
+  }
+  .reviewLine {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #203fc7;
+    width: 1px;
+    height: 80%;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .reviewLine {
+    display: none;
+  }
+}
+.roomBookMobView {
+  @media (max-width: 960px) {
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+}
+
+.calenderBox {
+  @media (max-width: 1400px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      width: 30px;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .calenderBox {
+    justify-content: start !important;
+  }
+}

@@ -1,0 +1,177 @@
+@media (max-width: 1050px) {
+  .Stepper {
+    width: 75% !important;
+  }
+  .leftCon {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .css-pvik1y-MuiButtonBase-root-MuiButton-root {
+    width: 50px !important;
+    height: 43px !important;
+    min-width: 43px !important;
+  }
+
+  .css-i4bv87-MuiSvgIcon-root {
+    font-size: clamp(1.8rem, 5vw, 1.5rem);
+  }
+}
+@media (max-width: 1100px) {
+  .landingSec {
+    flex-direction: column;
+    padding-inline: 20px !important;
+    padding-top: 0 !important;
+    .leftCon {
+      order: 1;
+      width: 100%;
+      display: flex;
+      flex: 1 0 100%;
+      margin-top: 1rem;
+      flex-direction: column;
+      .content {
+        padding-inline: 50px;
+        align-items: center;
+      }
+    }
+    .submitExplore {
+      width: 47%;
+    }
+
+    .rightCon {
+      overflow-x: hidden !important;
+      width: 100% !important;
+      height: 100% !important;
+      padding-right: 0 !important;
+      &::after {
+        display: none !important;
+      }
+
+      .LandingImg {
+        border-radius: 0 !important;
+      }
+    }
+    .background {
+      width: 100% !important;
+      border-radius: 45px !important;
+      padding-inline: 10px !important;
+      height: 60vh !important;
+      background-size: cover !important;
+      background-position: center center !important;
+      background-attachment: fixed !important;
+      object-fit: fill;
+      z-index: 999;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .chartsCon {
+    flex-direction: column;
+  }
+  .footerContainer {
+    flex-direction: column !important;
+    align-items: start !important;
+    gap: 20px;
+  }
+  .listHead {
+    padding-left: 0 !important;
+  }
+  .listChild {
+    padding-left: 0 !important;
+  }
+  .viewSec {
+    .grid {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: 30rem 10rem;
+      grid-template-areas:
+        "main main main main "
+        "- - - -";
+      .roomCard {
+        width: 100%;
+      }
+    }
+  }
+  .title {
+    margin-bottom: 10px !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .Stepper {
+    width: 100% !important;
+  }
+
+  .userContainer {
+    padding-inline: 20px !important;
+  }
+
+  .viewSec {
+    .grid {
+      grid-template-columns: auto auto;
+      grid-template-rows: 30rem 10rem 10rem;
+      grid-template-areas:
+        "main main"
+        "- - "
+        "- - ";
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    padding: 0px 30px;
+  }
+}
+
+@media (max-width: 960px) {
+  .capacityCon {
+    justify-content: start !important;
+  }
+  .roomDetailsCon
+    .roomDetailsBooking
+    .roomDetailsBook
+    .roomDetailsCard
+    .submitBooking
+    .submitBtn {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .roomDetailsCon .roomDetailsBooking .roomDetailsBook .roomDetailsCard {
+    padding-left: 15px !important;
+  }
+}
+@media (max-width: 900px) {
+  .loginContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1286px) {
+  .inputsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px !important;
+  }
+}
+
+@media (max-width: 550px) {
+  .inputsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0px !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .roomFacilities {
+    display: none !important;
+  }
+}

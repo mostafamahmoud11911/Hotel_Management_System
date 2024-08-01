@@ -1,0 +1,39 @@
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 2rem 0;
+}
+.cardImage {
+  text-align: start;
+  width: 100%;
+  max-width: 25rem;
+}
+.exploreContainer {
+  font-family: "Poppins", sans-serif;
+
+  .ExploreImages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    justify-content: center; 
+
+    @media (min-width: 1024px) {
+      justify-content: start;
+    }
+    @media (min-width: 0px) and (max-width: "1000px") {
+      justify-content: center;
+    }
+  }
+}
+.titleExplore {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  font-weight: 600 !important;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+}
+.imgExplore {
+  justify-content: start !important;
+}

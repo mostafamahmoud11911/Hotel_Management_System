@@ -1,0 +1,25 @@
+.showMore {
+  animation: showMoreCursor 2s infinite;
+}
+@keyframes showMoreCursor {
+  50% {
+    transform: translateY(-20%) rotateY(10deg);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+.favoriteComponent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+  // justify-content: center;
+
+  justify-content: start;
+
+  @media (min-width: 525px) {
+  }
+  @media (min-width: 0px) and (max-width: "525px") {
+  }
+}
