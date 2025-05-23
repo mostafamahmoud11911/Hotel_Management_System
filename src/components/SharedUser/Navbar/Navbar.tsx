@@ -196,10 +196,11 @@ export default function DrawerAppBar() {
                                 </>
                             ) : (
                                 <Box sx={{
-                                    display: { xs: 'none', sm: 'flex' },
+                                    display: "flex",
                                     gap: '12px',
-                                    marginLeft: '20px',
-                                    alignItems: 'center'
+                                    flexDirection: { xs: 'column', sm: 'row' },
+                                    marginLeft: '10px',
+                                    alignItems: {xs:'start', sm:'center'}
                                 }}>
                                     <Button
                                         component={Link}

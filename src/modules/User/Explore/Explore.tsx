@@ -99,7 +99,11 @@ export default function Explore() {
 
     useEffect(() => {
         getAllRooms();
-        getAllFavorites();
+        const authToken = localStorage.getItem("authToken");
+        if (authToken) {
+            getAllFavorites();
+        }
+
     }, [getAllFavorites, getAllRooms])
     return (
         <Container>

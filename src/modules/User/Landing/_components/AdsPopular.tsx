@@ -29,31 +29,34 @@ export default function AdsPopular() {
     setOpen(false);
   };
 
+  const getAllFavorites = useCallback(async () => {
+    try {
+      const { data } = await api.get('/portal/favorite-rooms');
+      setFavorites(data.data.favoriteRooms[0].rooms);
+    } catch (error) {
+      const err = error as AxiosError<{ message?: string }>
+      toast.error(err?.response?.data?.message || err.message || 'An unexpected error occurred')
+    }
+  }, [setFavorites]);
 
   const getAllAds = useCallback(async () => {
     setLoading(true)
     try {
       const { data } = await api.get("/portal/ads");
-      setAds(data.data.ads)
+      setAds(data.data.ads);
+      if (localStorage.getItem("authToken")) {
+        getAllFavorites()
+      }
     } catch (error) {
       const err = error as AxiosError<{ message?: string }>
       toast.error(err?.response?.data?.message || err.message || 'An unexpected error occurred')
     } finally {
       setLoading(false)
     }
-  }, [setAds]);
+  }, [getAllFavorites, setAds]);
 
 
-  const getAllFavorites = async () => {
-    try {
-      const { data } = await api.get('/portal/favorite-rooms');
-      console.log(data);
-      setFavorites(data.data.favoriteRooms[0].rooms);
-    } catch (error) {
-      const err = error as AxiosError<{ message?: string }>
-      toast.error(err?.response?.data?.message || err.message || 'An unexpected error occurred')
-    }
-  }
+
 
 
 
@@ -78,10 +81,11 @@ export default function AdsPopular() {
 
   useEffect(() => {
     getAllAds();
-    if (localStorage.getItem("authToken") !== null) {
-      getAllFavorites()
+    const authToken = localStorage.getItem("authToken");
+    if (authToken) {
+      getAllFavorites();
     }
-  }, [getAllAds]);
+  }, [getAllAds, getAllFavorites]);
   return (
     <>
       {!loading && ads.length === 0 && (
