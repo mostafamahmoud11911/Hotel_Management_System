@@ -8,7 +8,7 @@ export default function AuthLayout() {
 
     return (
         <Grid container >
-            <Grid size={{ sm: 12, md: 6 }}>
+            <Grid size={{ xs: 12, md: 6 }}>
                 <Box sx={{ py: 1, px: 4 }}>
                     
 
