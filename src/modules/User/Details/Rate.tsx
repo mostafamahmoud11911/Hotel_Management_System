@@ -9,6 +9,7 @@ import { ErrorOutline } from '@mui/icons-material';
 import { toast } from 'sonner';
 import { AxiosError } from 'axios';
 import { api } from '../../../utils/custom';
+import LoginModal from '../../../components/SharedUser/LoginModal/LoginModal';
 
 
 
@@ -29,8 +30,17 @@ const StyledRating = styled(Rating)<StyledRatingProps>(({ theme, error }) => ({
 
 export default function Rate() {
     const [value, setRate] = useState<number | null>(0);
-
     const { id } = useParams();
+
+    const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
 
     type RoomReview = z.infer<typeof roomReviewSchema>;
 
@@ -51,6 +61,10 @@ export default function Rate() {
 
 
     const onSubmit: SubmitHandler<RoomReview> = async (rate) => {
+        const existUser = localStorage.getItem("authToken");
+        if (!existUser) {
+            return handleClickOpen();
+        }
         try {
             const { data } = await api.post('/portal/room-reviews', rate);
             toast.success(data.message);
@@ -95,6 +109,7 @@ export default function Rate() {
                 />
                 <Button variant="contained" type="submit" sx={{ mt: 4, paddingX: "4rem" }}>Rate</Button>
             </Box>
+            <LoginModal open={open} handleClose={handleClose} />
 
         </Box>
     )

@@ -1,4 +1,4 @@
-import { Box, Breadcrumbs, Container, IconButton, Pagination, Stack, styled, Typography } from "@mui/material";
+import { Box, Breadcrumbs, Container, IconButton, Pagination, Skeleton, Stack, styled, Typography } from "@mui/material";
 import { AxiosError } from "axios";
 import { NavLink } from "react-router";
 import { toast } from "sonner";
@@ -7,7 +7,6 @@ import { useCallback, useEffect, useState } from "react";
 import { Rooms } from "../../../types/types";
 import formatCurrency from "../../../utils/formatCurrency";
 import { Visibility } from "@mui/icons-material";
-import BouncingLoader from "../../../components/SharedAdmin/Loader/Loader";
 import { Paths } from "../../../constant/enums";
 import Fav from "../../../components/SharedUser/Fav/Fav";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -124,7 +123,7 @@ export default function Explore() {
                 <Box mt={5}>
                     <Typography variant="body1" color="#152C5B" fontWeight={"bold"} mb={2}>All Rooms</Typography>
                     {!loading && rooms.length === 0 && <Typography variant="body1" color="#152C5B" textAlign={"center"} fontWeight={"bold"} mb={2}>No rooms available</Typography>}
-                    {loading ? <BouncingLoader /> : <>
+                    {loading ? <SkeletonLoader /> : <>
 
                         <Box sx={{ display: "grid", gridTemplateColumns: { md: "repeat(4,  1fr)", sm: "repeat(3,  1fr)", xs: "repeat(2,  1fr)" }, gap: 2 }}>
                             {displayItems.map(room => (
@@ -157,3 +156,16 @@ export default function Explore() {
         </Container>
     )
 }
+
+
+
+const SkeletonLoader = () => {
+  return (
+    <Box sx={{ display: "grid", gridTemplateColumns: { md: "repeat(4,  1fr)" }, gap: 2 }}>
+      <Skeleton height={300} />
+      <Skeleton height={300} />
+      <Skeleton height={300} />
+      <Skeleton height={300} />
+    </Box>
+  );
+};
